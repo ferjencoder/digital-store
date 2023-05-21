@@ -1,8 +1,9 @@
 
 
 import fs from 'fs';
+// import products from '../files/products.json'
 
-const PRODUCTS_FILE_PATH = './products.json';
+const PRODUCTS_FILE_PATH = '../files/products.json';
 
 export default class ProductManager {
 
@@ -19,7 +20,7 @@ export default class ProductManager {
                 throw new Error( `${PRODUCTS_FILE_PATH} does not exist` );
 
             } else {
-                throw new Error( `Error => reading the products file 👩🏻‍💻 ${error.message}` );
+                throw new Error( `Error => reading the products file: ${error.message}` );
             }
         }
     };
@@ -74,7 +75,7 @@ export default class ProductManager {
         try {
             await this._writeToFile( products );
         } catch ( error ) {
-            console.error( 'Error writing to file 👩🏻‍💻:', error );
+            console.error( 'Error writing to file:', error );
             throw error;
         }
 
@@ -96,7 +97,7 @@ export default class ProductManager {
         try {
             await this._writeToFile( products );
         } catch ( error ) {
-            console.error( 'Error writing to file 👩🏻‍💻:', error );
+            console.error( 'Error writing to file:', error );
             throw error;
         }
 
@@ -125,15 +126,17 @@ export default class ProductManager {
     // Other methods...
     async _readFromFile () {
         try {
+
             console.log( PRODUCTS_FILE_PATH );
 
             const data = await fs.promises.readFile( PRODUCTS_FILE_PATH, 'utf-8' );
+
             if ( !data || data.trim() === '' ) {
                 throw new Error( `${PRODUCTS_FILE_PATH} is empty` );
             }
 
-            const parsedData = JSON.parse( data );
-            return parsedData;
+            return data;
+
         } catch ( error ) {
             if ( error.code === 'ENOENT' ) {
                 throw new Error( `${PRODUCTS_FILE_PATH} does not exist` );
