@@ -1,4 +1,35 @@
-# Digital Store
+# Digital-Store
+Digital-Store is a versatile e-commerce platform that specializes in providing a wide range of digital products. The platform is designed to cater to various sectors, including management, healthcare, marketing, finance, multimedia, and education.
+
+Our products range from reservation management systems, online ordering and delivery platforms, inventory management systems, to e-learning platforms and more. Each product is designed with the latest technologies and is tailored to meet the specific needs of the industry it serves.
+
+[Visit Digital Store Backend](https://digital-store-backend.netlify.app/)
+
+
+## Key Features
+Diverse Product Range: We offer a wide variety of digital products, each designed to cater to specific industry needs. Whether you need a reservation management system for your restaurant or an e-learning platform for your educational institution, we've got you covered.
+
+Quality Assurance: Each product on our platform is thoroughly tested and rated by users to ensure you get the best quality.
+
+User-Friendly Interface: Our platform is designed to provide a seamless and user-friendly experience for both buyers and sellers.
+
+Tech Stack: Our products are built using a variety of modern web technologies, including React, Node.js, Django, Python, Angular, PHP, Laravel, Java, Spring Boot, Swift, Kotlin, JavaScript, Express.js, Ruby on Rails, Unity, and C#.
+
+Product Management: Allows sellers to easily add, update, and manage their digital products.
+
+Category Management: Organizes products into various categories for easy navigation and search.
+
+Shopping Cart: Enables buyers to add products to a shopping cart and proceed to checkout when ready.
+
+Order Management: Handles order processing, including payment and delivery of digital products.
+
+Search and Filter: Allows buyers to search for specific products and filter results based on various criteria.
+
+User Management: Manages user accounts, including registration, login, and profile management.
+
+Digital-Store is your one-stop-shop for all your digital product needs. Whether you're a buyer looking for a specific digital product or a seller looking to reach a wider audience, Digital-Store is the platform for you.
+
+---
 
 This is a Node.js and Express server for a digital store. The server provides API endpoints for managing products and shopping carts.
 
