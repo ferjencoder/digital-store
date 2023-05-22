@@ -1,6 +1,6 @@
 [
 	{
-		"id": "1",
+		"id": 1,
 		"title": "Basic Login Form",
 		"category": "Dynamic Forms",
 		"code:": "string",
@@ -23,7 +23,7 @@
 		"rating": 4.5
 	},
 	{
-		"id": "2",
+		"id": 2,
 		"title": "Advanced Registration Form",
 		"category": "Dynamic Forms",
 		"code:": "string",
@@ -46,7 +46,7 @@
 		"rating": 4.7
 	},
 	{
-		"id": "3",
+		"id": 3,
 		"title": "Basic Data Table",
 		"category": "Data Tables",
 		"code:": "string",
@@ -68,7 +68,7 @@
 		"rating": 4.6
 	},
 	{
-		"id": "4",
+		"id": 4,
 		"title": "Advanced Data Table",
 		"category": "Data Tables",
 		"code:": "string",
@@ -91,7 +91,7 @@
 		"rating": 4.8
 	},
 	{
-		"id": "5",
+		"id": 5,
 		"title": "Basic Bar Chart",
 		"category": "Charts/Graphs",
 		"code:": "string",
@@ -114,7 +114,7 @@
 		"rating": 4.5
 	},
 	{
-		"id": "6",
+		"id": 6,
 		"title": "Advanced Line Graph",
 		"category": "Charts/Graphs",
 		"code:": "string",
@@ -137,7 +137,7 @@
 		"rating": 4.7
 	},
 	{
-		"id": "7",
+		"id": 7,
 		"title": "Simple Location Map",
 		"category": "Interactive Maps",
 		"code:": "string",
@@ -160,7 +160,7 @@
 		"rating": 4.6
 	},
 	{
-		"id": "8",
+		"id": 8,
 		"title": "Interactive Map",
 		"category": "Interactive Maps",
 		"code:": "string",
@@ -183,7 +183,7 @@
 		"rating": 4.8
 	},
 	{
-		"id": "9",
+		"id": 9,
 		"title": "Sign In Form",
 		"category": "Authentication Components",
 		"code:": "string",
@@ -206,7 +206,7 @@
 		"rating": 4.5
 	},
 	{
-		"id": "10",
+		"id": 10,
 		"title": "User Profile",
 		"category": "Authentication Components",
 		"code:": "string",
@@ -228,7 +228,7 @@
 		"rating": 4.6
 	},
 	{
-		"id": "11",
+		"id": 11,
 		"title": "Basic Dashboard",
 		"category": "Dashboards",
 		"code:": "string",
@@ -251,7 +251,7 @@
 		"rating": 4.6
 	},
 	{
-		"id": "12",
+		"id": 12,
 		"title": "Advanced Dashboard",
 		"category": "Dashboards",
 		"code:": "string",
@@ -275,7 +275,7 @@
 		"rating": 4.8
 	},
 	{
-		"id": "13",
+		"id": 13,
 		"title": "Basic Shopping Cart",
 		"category": "Shopping Cart",
 		"code:": "string",
@@ -297,7 +297,7 @@
 		"rating": 4.7
 	},
 	{
-		"id": "14",
+		"id": 14,
 		"title": "Advanced Shopping Cart",
 		"category": "Shopping Cart",
 		"code:": "string",
@@ -320,7 +320,7 @@
 		"rating": 4.8
 	},
 	{
-		"id": "15",
+		"id": 15,
 		"title": "Basic Image Slider",
 		"category": "Image Sliders/Carousels",
 		"code:": "string",
@@ -342,7 +342,7 @@
 		"rating": 4.6
 	},
 	{
-		"id": "16",
+		"id": 16,
 		"title": "Advanced Content Carousel",
 		"category": "Image Sliders/Carousels",
 		"code:": "string",
@@ -365,7 +365,7 @@
 		"rating": 4.8
 	},
 	{
-		"id": "17",
+		"id": 17,
 		"title": "Linear Progress Bar",
 		"category": "Progress Bars",
 		"code:": "string",
@@ -388,7 +388,7 @@
 		"rating": 4.7
 	},
 	{
-		"id": "18",
+		"id": 18,
 		"title": "Circular Progress Bar",
 		"category": "Progress Bars",
 		"code:": "string",
@@ -411,7 +411,7 @@
 		"rating": 4.8
 	},
 	{
-		"id": "19",
+		"id": 19,
 		"title": "Basic Info Card",
 		"category": "Card Components",
 		"code:": "string",
@@ -434,7 +434,7 @@
 		"rating": 4.6
 	},
 	{
-		"id": "20",
+		"id": 20,
 		"title": "Advanced Product Card",
 		"category": "Card Components",
 		"code:": "string",
@@ -455,5 +455,43 @@
 		],
 		"downloads": 270,
 		"rating": 4.7
+	},
+	{
+		"id": 21,
+		"title": "Product title",
+		"category": "Product category",
+		"code": "Product code",
+		"shortDescription": "Short description",
+		"description": "Long description",
+		"thumbnails": [
+			"http://example.com/image1.jpg",
+			"http://example.com/image2.jpg"
+		],
+		"demoUrl": "http://example.com",
+		"techStack": [
+			"JavaScript",
+			"Node.js"
+		],
+		"stock": 100,
+		"price": 199.99
+	},
+	{
+		"id": 23,
+		"title": "Product title",
+		"category": "Product category",
+		"code": "Product code",
+		"shortDescription": "Short description",
+		"description": "Long description",
+		"thumbnails": [
+			"http://example.com/image1.jpg",
+			"http://example.com/image2.jpg"
+		],
+		"demoUrl": "http://example.com",
+		"techStack": [
+			"JavaScript",
+			"Node.js"
+		],
+		"stock": 100,
+		"price": 199.99
 	}
 ]
