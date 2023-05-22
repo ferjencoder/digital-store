@@ -2,12 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+// import { priceInARS } from '../../utils/utils';
 
 
 export const ProductForm = () => {
 
     const [ products, setProducts ] = useState( [] );
     const [ title, setTitle ] = useState( '' );
+    const [ category, setCategory ] = useState( '' );
     const [ description, setDescription ] = useState( '' );
     const [ price, setPrice ] = useState( '' );
     const [ selectedProduct, setSelectedProduct ] = useState( null );
@@ -36,6 +38,7 @@ export const ProductForm = () => {
         if ( selectedProduct ) {
             await axios.put( `/api/products/${selectedProduct.id}`, {
                 title,
+                category,
                 description,
                 price,
             } );
@@ -44,6 +47,7 @@ export const ProductForm = () => {
         }
 
         setTitle( '' );
+        setCategory( '' );
         setDescription( '' );
         setPrice( '' );
         setSelectedProduct( null );
@@ -60,6 +64,13 @@ export const ProductForm = () => {
                 required
             />
             <input
+                value={category}
+                onChange={( e ) => setCategory( e.target.value )}
+                placeholder="Category"
+                required
+            >
+            </input>
+            <input
                 value={description}
                 onChange={( e ) => setDescription( e.target.value )}
                 placeholder="Description"
@@ -71,7 +82,9 @@ export const ProductForm = () => {
                 placeholder="Price"
                 required
             />
-            <button type="submit">{selectedProduct ? 'Update' : 'Create'}</button>
+            <button
+                className='btn-success'
+                type="submit">{selectedProduct ? 'Update' : 'Create'}</button>
         </form>
 
     );

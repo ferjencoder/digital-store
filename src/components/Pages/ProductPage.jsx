@@ -63,9 +63,11 @@ export const ProductPage = () => {
 
             <section className='products-section'>
 
-                <button onClick={handleShowAllProducts}>Show All Products</button>
+                <button
+                    className='btn-delete'
+                    onClick={handleShowAllProducts}>Show All Products</button>
 
-                <ul>
+                <ul className='products-list'>
                     {products.map( ( product ) => (
                         <ProductItem
                             key={product.id}

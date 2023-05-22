@@ -24,4 +24,5 @@ export const uploader = multer( {
         next();
 
     }
-} )
+} );
+

@@ -5,8 +5,8 @@ import fs from 'fs';
 import { __dirname } from '../utils/utils.js';
 
 const PRODUCTS_FILE_PATH = path.resolve( __dirname, '../data/products.json' );
-const ERROR_PRODUCT_NOT_FOUND = 'Product not found';
-const ERROR_FAILED_TO_SAVE = 'Failed to save product with id: ';
+// const ERROR_PRODUCT_NOT_FOUND = 'Product not found';
+// const ERROR_FAILED_TO_SAVE = 'Failed to save product with id: ';
 
 export default class ProductManager {
 
