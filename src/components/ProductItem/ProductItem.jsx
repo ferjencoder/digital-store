@@ -1,7 +1,5 @@
 
 
-
-
 const priceInARS = ( precio ) => {
     //Format price
     let precioToFormat = precio;
@@ -12,6 +10,33 @@ const priceInARS = ( precio ) => {
     };
     const priceInARS = new Intl.NumberFormat( 'es-AR', options ).format( precioToFormat );
     return priceInARS;
+};
+
+const categoryStyles = {
+    'Keto': {
+        backgroundColor: '#f75f48',
+        color: 'white'
+    },
+    'Light': {
+        backgroundColor: '#a1d168',
+        color: 'black'
+    },
+    'Vegetariano': {
+        backgroundColor: '#f79432',
+        color: 'white'
+    },
+    'Vegano': {
+        backgroundColor: '#4f8206',
+        color: 'white'
+    },
+    'Sin Gluten': {
+        backgroundColor: '#ffd500',
+        color: 'black'
+    },
+    'default': {
+        backgroundColor: '#fe54ac',
+        color: 'white'
+    }
 };
 
 export const ProductItem = ( { product, editBtn, deleteBtn } ) => {
@@ -25,20 +50,20 @@ export const ProductItem = ( { product, editBtn, deleteBtn } ) => {
                 className='product-item__image'
             />
             <div className='product-item__body'>
-                <p>{product.title}</p>
+                <p className='ff-secondary fs-2'>{product.title}</p>
                 <p>{product.category}</p>
                 <p>{product.shortDescription}</p>
                 <p>Price: {priceInARS( product.price )}</p>
             </div>
             <div className='product-item__buttons'>
                 <button
-                    className='btn-edit'
+                    className='btn-edit ff-secondary fs-2'
                     onClick={() => editBtn( product )}>
                     Edit
                 </button>
 
                 <button
-                    className='btn-delete'
+                    className='btn-delete ff-secondary fs-2'
                     onClick={() => deleteBtn( product )}>
                     Delete
                 </button>

@@ -64,7 +64,7 @@ export const ProductPage = () => {
             <section className='products-section'>
 
                 <button
-                    className='btn-delete'
+                    className='btn-delete ff-secondary fs-3'
                     onClick={handleShowAllProducts}>Show All Products</button>
 
                 <ul className='products-list'>

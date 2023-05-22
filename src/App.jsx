@@ -16,7 +16,7 @@ export const App = () => {
     <>
       <Navbar />
       <main className='main-container'>
-        <h1> Digital Store</h1>
+        <h1 className='ff-secondary'> Digital Store</h1>
         <ProductPage />
       </main>
     </>
