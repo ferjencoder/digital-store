@@ -5,6 +5,9 @@ import fs from 'fs';
 import { __dirname } from '../utils/utils.js';
 
 const PRODUCTS_FILE_PATH = path.resolve( __dirname, '../data/products.json' );
+console.log( 'dirname=>', __dirname );
+console.log( 'PRODUCTS_FILE_PATH=>', PRODUCTS_FILE_PATH );
+
 // const ERROR_PRODUCT_NOT_FOUND = 'Product not found';
 // const ERROR_FAILED_TO_SAVE = 'Failed to save product with id: ';
 

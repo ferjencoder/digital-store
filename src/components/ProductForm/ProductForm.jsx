@@ -57,7 +57,13 @@ export const ProductForm = () => {
     return (
 
         <>
-            <form className="products-section" onSubmit={handleSubmit}>
+            <form
+                className="products-section"
+                onSubmit={handleSubmit}
+                action='/api/products'
+                method='POST'
+                encType='multipart/form-data'
+            >
                 <input
                     value={title}
                     onChange={( e ) => setTitle( e.target.value )}

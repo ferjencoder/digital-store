@@ -12,7 +12,7 @@ dotenv.config();
 
 const app = express();
 app.use( cors() );
-app.use( express.json() ); // Used to parse JSON bodies
+app.use( express.json() );
 
 const PORT = process.env.REACT_APP_PORT || 8080;
 
@@ -21,10 +21,17 @@ if ( !PORT ) {
     process.exit( 1 );
 }
 
+// app.use( '/api/products', routerProducts );
+// app.use( '/api/carts', routerCart );
+// app.use( '/api/users', routerUsers );
+
 app.use( routerProducts );
 app.use( routerCart );
 app.use( routerUsers );
 
+// app.use( '/api/carts', routerCart );
+
+// app.use('/api/carts', cartRouter);
 // app.use( '/api/products', routerProducts );
 // app.use( '/api/cart', routerCart );
 
