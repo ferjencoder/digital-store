@@ -33,7 +33,15 @@
 		"products": [
 			{
 				"product": 2,
+				"quantity": 2
+			},
+			{
+				"product": 4,
 				"quantity": 1
+			},
+			{
+				"product": 5,
+				"quantity": 4
 			}
 		]
 	},
