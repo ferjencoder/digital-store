@@ -1,11 +1,12 @@
 
 
 import { Router } from 'express';
-import ProductManager from '../controllers/productsControllers.js';
+import ProductsManager from '../classes/ProductsManager.class.js';
+
 
 export const routerProducts = Router();
 
-const productManager = new ProductManager();
+const productManager = new ProductsManager();
 
 routerProducts.get( '/test', ( req, res ) => {
     res.send( 'Test route' );

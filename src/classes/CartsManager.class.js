@@ -8,9 +8,9 @@ import { dirname } from 'path';
 const __filename = fileURLToPath( import.meta.url );
 const __dirname = dirname( __filename );
 
-const CART_FILE_PATH = path.resolve( __dirname, '../../src/data/cart.json' );
+const CART_FILE_PATH = path.resolve( __dirname, '../data/carts.json' );
 
-export default class CartManager {
+export default class CartsManager {
 
     async getCarts () {
 

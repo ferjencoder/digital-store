@@ -129,6 +129,11 @@ button {
     font-size: 1rem;
     padding: 0.5em 0.8em;
   }
+
+  & select {
+    font-size: 1rem;
+    padding: 0.5em 0.8em;
+  }
 }
 
 .products-section {

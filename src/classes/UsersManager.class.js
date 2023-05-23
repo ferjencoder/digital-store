@@ -7,7 +7,7 @@ import { __dirname } from '../utils/utils.js';
 const USERS_FILE_PATH = path.resolve( __dirname, '../data/users.json' );
 
 
-export default class ProductManager {
+export default class UsersManager {
 
     async getUsers () {
 

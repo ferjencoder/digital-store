@@ -1,7 +1,8 @@
 
 
 import { Router } from 'express';
-import UsersManager from '../controllers/usersControllers.js';
+import UsersManager from '../classes/UsersManager.class.js';
+// import UsersManager from '../controllers/usersControllers.js';
 
 
 //const routerUsers = Router();

@@ -1,16 +1,16 @@
 
 
 import { Router } from 'express';
-import CartManager from '../controllers/cartControllers.js';
+import CartsManager from '../classes/CartsManager.class.js';
 
 export const routerCart = Router();
 
-const cartManager = new CartManager();
+const cartsManager = new CartsManager();
 
 // POST /api/carts/
 routerCart.post( '/api/carts/', async ( req, res ) => {
     try {
-        const newCart = await cartManager.createCart();
+        const newCart = await cartsManager.createCart();
         res.status( 201 ).json( newCart );
 
     } catch ( error ) {
@@ -20,7 +20,7 @@ routerCart.post( '/api/carts/', async ( req, res ) => {
 // GET /api/carts/
 routerCart.get( '/api/carts/', async ( req, res ) => {
     try {
-        const allCarts = await cartManager.getCarts();
+        const allCarts = await cartsManager.getCarts();
         res.status( 201 ).json( allCarts );
 
     } catch ( error ) {
@@ -33,7 +33,7 @@ routerCart.get( '/api/carts/:cid', async ( req, res ) => {
 
     try {
         const { cid } = req.params;
-        const cart = await cartManager.getCartById( cid );
+        const cart = await cartsManager.getCartById( cid );
 
         res.json( cart );
 
@@ -50,7 +50,7 @@ routerCart.post( '/api/carts/:cid/product/:pid', async ( req, res ) => {
         console.log( req.params );
 
         const { cid, pid } = req.params;
-        const cart = await cartManager.addProductToCart( cid, pid );
+        const cart = await cartsManager.addProductToCart( cid, pid );
         console.log( cart );
 
         res.json( cart );

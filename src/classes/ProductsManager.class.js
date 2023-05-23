@@ -9,11 +9,9 @@ const __filename = fileURLToPath( import.meta.url );
 const __dirname = dirname( __filename );
 
 const PRODUCTS_FILE_PATH = path.resolve( __dirname, '../data/products.json' );
-// console.log( 'dirname=>', __dirname );
-// console.log( 'PRODUCTS_FILE_PATH=>', PRODUCTS_FILE_PATH );
 
 
-export default class ProductManager {
+export default class ProductsManager {
 
     // Utility methods
     async readProductsFromFile () {
