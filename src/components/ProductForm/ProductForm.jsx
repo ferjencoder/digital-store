@@ -3,9 +3,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-export const ProductForm = () => {
+export const ProductForm = ( { selectedProduct, onFetchProducts } ) => {
     const [ categories, setCategories ] = useState( [] );
-    const [ products, setProducts ] = useState( [] );
     const [ formData, setFormData ] = useState( {
         title: '',
         category: '',
@@ -16,9 +15,8 @@ export const ProductForm = () => {
         shortDescription: '',
         thumbnails: [],
         techStack: [],
-        stock: 0
+        stock: 0,
     } );
-    const [ selectedProduct, setSelectedProduct ] = useState( null );
     const [ isLoading, setIsLoading ] = useState( false );
     const [ error, setError ] = useState( null );
 
@@ -26,8 +24,23 @@ export const ProductForm = () => {
         const fetchData = async () => {
             setIsLoading( true );
             try {
-                await fetchProducts();
                 await fetchCategories();
+                if ( selectedProduct ) {
+                    setFormData( selectedProduct );
+                } else {
+                    setFormData( {
+                        title: '',
+                        category: '',
+                        description: '',
+                        price: 0,
+                        code: '',
+                        demoUrl: '',
+                        shortDescription: '',
+                        thumbnails: [],
+                        techStack: [],
+                        stock: 0,
+                    } );
+                }
             } catch ( err ) {
                 setError( err.message );
             } finally {
@@ -35,25 +48,12 @@ export const ProductForm = () => {
             }
         };
         fetchData();
-    }, [] );
-
-    const fetchProducts = async () => {
-        const response = await axios.get( '/api/products' );
-        setProducts( response.data );
-    };
+    }, [ selectedProduct ] );
 
     const fetchCategories = async () => {
         const response = await axios.get( '/api/categories' );
         setCategories( response.data );
     };
-
-    // const handleChange = ( e ) => {
-    //     const { name, value } = e.target;
-    //     setFormData( ( prevData ) => ( {
-    //         ...prevData,
-    //         [ name ]: value,
-    //     } ) );
-    // };
 
     const handleChange = ( e ) => {
         const { name, value } = e.target;
@@ -82,13 +82,15 @@ export const ProductForm = () => {
         }
     };
 
-
     const handleSubmit = async ( event ) => {
         event.preventDefault();
         setIsLoading( true );
         try {
             if ( selectedProduct ) {
-                await axios.put( `/api/products/${selectedProduct.id}`, formData );
+                await axios.put(
+                    `/api/products/${selectedProduct.id}`,
+                    formData
+                );
             } else {
                 await axios.post( '/api/products', formData );
             }
@@ -96,16 +98,15 @@ export const ProductForm = () => {
                 title: '',
                 category: '',
                 description: '',
-                price: '',
+                price: 0,
                 code: '',
                 demoUrl: '',
                 shortDescription: '',
                 thumbnails: [],
                 techStack: [],
-                stock: ''
+                stock: 0,
             } );
-            setSelectedProduct( null );
-            await fetchProducts();
+            await onFetchProducts();
         } catch ( err ) {
             setError( err.message );
         } finally {
@@ -115,11 +116,11 @@ export const ProductForm = () => {
 
     if ( isLoading ) {
         return <div>Loading...</div>;
-    };
+    }
 
     if ( error ) {
         return <div>Error: {error}</div>;
-    };
+    }
 
     return (
         <>
@@ -203,7 +204,7 @@ export const ProductForm = () => {
                     required
                 />
                 <button className="btn-success ff-secondary fs-3" type="submit">
-                    {selectedProduct ? 'Update' : 'Create'}
+                    {onSelectedProduct ? 'Update' : 'Create'}
                 </button>
             </form>
 

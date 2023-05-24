@@ -1,43 +1,32 @@
-
-
+// ProductPage.jsx
+import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
 import { ProductItem } from '../ProductItem/ProductItem';
 import { ProductForm } from '../ProductForm/ProductForm';
 import { Navbar } from '../Navbar/Navbar';
 
-
 export const ProductPage = () => {
-
     const [ products, setProducts ] = useState( [] );
-    const [ title, setTitle ] = useState( '' );
-    const [ description, setDescription ] = useState( '' );
-    const [ price, setPrice ] = useState( '' );
+    const [ isLoading, setIsLoading ] = useState( false );
+    const [ error, setError ] = useState( null );
     const [ selectedProduct, setSelectedProduct ] = useState( null );
-
-
-    useEffect( () => {
-
-        fetchProducts();
-
-    }, [] );
 
     const fetchProducts = async () => {
         try {
+            setIsLoading( true );
             const response = await axios.get( '/api/products' );
             setProducts( response.data );
-            console.log( '', products );
-            console.log( 'products', products );
-
         } catch ( error ) {
             console.error( error );
+            setError( 'Error fetching products' );
+        } finally {
+            setIsLoading( false );
         }
     };
 
-    const handleShowAllProducts = async () => {
+    useEffect( () => {
         fetchProducts();
-    };
-
+    }, [] );
 
     const handleDelete = async ( product ) => {
         try {
@@ -45,49 +34,52 @@ export const ProductPage = () => {
             fetchProducts();
         } catch ( error ) {
             console.error( error );
+            setError( 'Error deleting product' );
         }
     };
 
     const handleEdit = ( product ) => {
-        setTitle( product.title );
-        setDescription( product.description );
-        setPrice( product.price );
         setSelectedProduct( product );
     };
 
+    const handleShowAllProducts = async () => {
+        fetchProducts();
+    };
+
     return (
-
-        <main className='main-container' >
+        <main className="main-container">
             <Navbar />
-
-            <h1 className='ff-secondary'> Digital Store</h1>
-
-            <section className='productPage-container'>
-                <section className='productsForm-section'>
-                    <ProductForm />
+            <h1 className="ff-secondary">Digital Store</h1>
+            <section className="productPage-container">
+                <section className="productsForm-section">
+                    <ProductForm
+                        selectedProduct={selectedProduct}
+                        onFetchProducts={fetchProducts}
+                    />
                 </section>
-
-                <section className='products-section'>
-
+                <section className="products-section">
                     <button
-                        className='btn-delete ff-secondary fs-3'
-                        onClick={handleShowAllProducts}>Show All Products</button>
-
-                    <ul className='products-list'>
-                        {products.map( ( product ) => (
-                            <ProductItem
-                                key={product.id}
-                                product={product}
-                                editBtn={handleEdit}
-                                deleteBtn={handleDelete}
-                            />
-                        ) )}
-                    </ul>
-
-                </section >
+                        className="btn-delete ff-secondary fs-3"
+                        onClick={handleShowAllProducts}
+                    >
+                        Show All Products
+                    </button>
+                    {error ? (
+                        <div>Error: {error}</div>
+                    ) : (
+                        <ul className="products-list">
+                            {products.map( ( product ) => (
+                                <ProductItem
+                                    key={product.id}
+                                    product={product}
+                                    editBtn={handleEdit}
+                                    deleteBtn={handleDelete}
+                                />
+                            ) )}
+                        </ul>
+                    )}
+                </section>
             </section>
-        </main >
+        </main>
     );
 };
-
-
