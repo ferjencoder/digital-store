@@ -2,16 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import fs from 'fs';
-// import path from 'path';
-// import { fileURLToPath } from 'url';
-// import { dirname } from 'path';
-
-// const __filename = fileURLToPath( import.meta.url );
-// const __dirname = dirname( __filename );
-
-// const CATEGORIES_FILE_PATH = path.resolve( __dirname, '../data/categories.json' );
-const CATEGORIES_FILE_PATH = '../data/categories.json';
 
 
 export const ProductForm = () => {

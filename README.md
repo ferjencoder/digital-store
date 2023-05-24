@@ -66,9 +66,38 @@ This is a Node.js and Express server for a digital store. The server provides AP
 3. Install dependencies: `npm install`
 4. Start the server: `npm start`
 
-## Testing
+## API Usage
 
-You can use a tool like Postman to manually test the API endpoints.
+To interact with the Digital-Store backend API, you can use the provided Postman collection. The collection includes a set of requests that you can use to test the API endpoints.
+
+### Postman Collection
+
+You can import the Postman collections JSON files:
+- PrimeraEntrega-Carts.postman_collection.json
+- PrimeraEntrega-Products.postman_collection.json
+
+Import them into your Postman application. The collection contains the following requests:
+
+- List all products: `GET /api/products/`
+- Get a specific product by ID: `GET /api/products/:pid`
+- Add a new product: `POST /api/products/`
+- Update a specific product by ID: `PUT /api/products/:pid`
+- Delete a specific product by ID: `DELETE /api/products/:pid`
+
+- Create a new shopping cart: `POST /api/carts/`
+- Get a specific shopping cart by ID: `GET /api/carts/:cid`
+- Add a product to a specific shopping cart: `POST /api/carts/:cid/products/:pid`
+
+Please note that you need to have the Digital-Store backend server running locally or deployed in order to use these requests.
+
+### Testing the API
+
+1. Import the Postman collection JSON file into your Postman application.
+2. Start the Digital-Store backend server according to the setup instructions in the README.
+3. Send requests to the API endpoints using the imported collection.
+
+Feel free to explore and test the different API endpoints using the provided requests.
+
 
 ## Contributing
 

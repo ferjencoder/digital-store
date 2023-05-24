@@ -70,12 +70,16 @@
 			},
 			{
 				"product": 18,
-				"quantity": 1
+				"quantity": 2
 			}
 		]
 	},
 	{
 		"id": 9,
+		"products": []
+	},
+	{
+		"id": 10,
 		"products": []
 	}
 ]
