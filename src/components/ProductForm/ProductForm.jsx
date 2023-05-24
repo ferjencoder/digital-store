@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-
 export const ProductForm = () => {
     const [ categories, setCategories ] = useState( [] );
     const [ products, setProducts ] = useState( [] );
@@ -11,72 +10,115 @@ export const ProductForm = () => {
         title: '',
         category: '',
         description: '',
-        price: '',
+        price: 0,
         code: '',
         demoUrl: '',
         shortDescription: '',
         thumbnails: [],
         techStack: [],
+        stock: 0
     } );
     const [ selectedProduct, setSelectedProduct ] = useState( null );
+    const [ isLoading, setIsLoading ] = useState( false );
+    const [ error, setError ] = useState( null );
 
     useEffect( () => {
-        fetchProducts();
+        const fetchData = async () => {
+            setIsLoading( true );
+            try {
+                await fetchProducts();
+                await fetchCategories();
+            } catch ( err ) {
+                setError( err.message );
+            } finally {
+                setIsLoading( false );
+            }
+        };
+        fetchData();
     }, [] );
 
     const fetchProducts = async () => {
-        try {
-            const response = await axios.get( '/api/products' );
-            setProducts( response.data );
-        } catch ( error ) {
-            console.error( error );
-        }
+        const response = await axios.get( '/api/products' );
+        setProducts( response.data );
     };
-
-    useEffect( () => {
-        fetchCategories();
-    }, [] );
 
     const fetchCategories = async () => {
-        try {
-            const data = await fs.promises.readFile( CATEGORIES_FILE_PATH, 'utf-8' );
-            const categoriesData = JSON.parse( data );
-            setCategories( categoriesData.categories );
-        } catch ( error ) {
-            console.error( error );
-        }
+        const response = await axios.get( '/api/categories' );
+        setCategories( response.data );
     };
+
+    // const handleChange = ( e ) => {
+    //     const { name, value } = e.target;
+    //     setFormData( ( prevData ) => ( {
+    //         ...prevData,
+    //         [ name ]: value,
+    //     } ) );
+    // };
 
     const handleChange = ( e ) => {
         const { name, value } = e.target;
-        setFormData( ( prevData ) => ( {
-            ...prevData,
-            [ name ]: value,
-        } ) );
+
+        if ( name === 'stock' || name === 'price' ) {
+            // Parse the value as a number
+            let numericValue = parseFloat( value );
+
+            // Check if the value is a positive number
+            if ( numericValue < 0 || isNaN( numericValue ) ) {
+                // Set the value to 0 if it's negative or NaN
+                numericValue = 0;
+            }
+
+            // Update the state with the validated numeric value
+            setFormData( ( prevData ) => ( {
+                ...prevData,
+                [ name ]: numericValue,
+            } ) );
+        } else {
+            // For other fields, update the state as usual
+            setFormData( ( prevData ) => ( {
+                ...prevData,
+                [ name ]: value,
+            } ) );
+        }
     };
+
 
     const handleSubmit = async ( event ) => {
         event.preventDefault();
-
-        if ( selectedProduct ) {
-            await axios.put( `/api/products/${selectedProduct.id}`, formData );
-        } else {
-            await axios.post( '/api/products', formData );
+        setIsLoading( true );
+        try {
+            if ( selectedProduct ) {
+                await axios.put( `/api/products/${selectedProduct.id}`, formData );
+            } else {
+                await axios.post( '/api/products', formData );
+            }
+            setFormData( {
+                title: '',
+                category: '',
+                description: '',
+                price: '',
+                code: '',
+                demoUrl: '',
+                shortDescription: '',
+                thumbnails: [],
+                techStack: [],
+                stock: ''
+            } );
+            setSelectedProduct( null );
+            await fetchProducts();
+        } catch ( err ) {
+            setError( err.message );
+        } finally {
+            setIsLoading( false );
         }
+    };
 
-        setFormData( {
-            title: '',
-            category: '',
-            description: '',
-            price: '',
-            code: '',
-            demoUrl: '',
-            shortDescription: '',
-            thumbnails: [],
-            techStack: [],
-        } );
-        setSelectedProduct( null );
-        fetchProducts();
+    if ( isLoading ) {
+        return <div>Loading...</div>;
+    };
+
+    if ( error ) {
+        return <div>Error: {error}</div>;
     };
 
     return (
@@ -95,13 +137,7 @@ export const ProductForm = () => {
                     onChange={handleChange}
                     required
                 >
-                    <option
-                        name="category"
-                        value={formData.category}
-                        onChange={handleChange}
-                        placeholder="Category"
-                        required
-                    >
+                    <option value="">
                         Select a category
                     </option>
                     {categories.map( ( category ) => (
@@ -150,6 +186,13 @@ export const ProductForm = () => {
                     value={formData.techStack}
                     onChange={handleChange}
                     placeholder="Tech Stack"
+                    required
+                />
+                <input
+                    name="stock"
+                    value={formData.stock}
+                    onChange={handleChange}
+                    placeholder="Stock"
                     required
                 />
                 <input

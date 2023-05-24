@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { ProductItem } from '../ProductItem/ProductItem';
 import { ProductForm } from '../ProductForm/ProductForm';
+import { Navbar } from '../Navbar/Navbar';
 
 
 export const ProductPage = () => {
@@ -56,31 +57,36 @@ export const ProductPage = () => {
 
     return (
 
-        <section className='productPage-container'>
-            <section className='productsForm-section'>
-                <ProductForm />
+        <main className='main-container' >
+            <Navbar />
+
+            <h1 className='ff-secondary'> Digital Store</h1>
+
+            <section className='productPage-container'>
+                <section className='productsForm-section'>
+                    <ProductForm />
+                </section>
+
+                <section className='products-section'>
+
+                    <button
+                        className='btn-delete ff-secondary fs-3'
+                        onClick={handleShowAllProducts}>Show All Products</button>
+
+                    <ul className='products-list'>
+                        {products.map( ( product ) => (
+                            <ProductItem
+                                key={product.id}
+                                product={product}
+                                editBtn={handleEdit}
+                                deleteBtn={handleDelete}
+                            />
+                        ) )}
+                    </ul>
+
+                </section >
             </section>
-
-            <section className='products-section'>
-
-                <button
-                    className='btn-delete ff-secondary fs-3'
-                    onClick={handleShowAllProducts}>Show All Products</button>
-
-                <ul className='products-list'>
-                    {products.map( ( product ) => (
-                        <ProductItem
-                            key={product.id}
-                            product={product}
-                            editBtn={handleEdit}
-                            deleteBtn={handleDelete}
-                        />
-                    ) )}
-                </ul>
-
-            </section >
-        </section>
-
+        </main >
     );
 };
 

@@ -12,32 +12,6 @@ const priceInARS = ( precio ) => {
     return priceInARS;
 };
 
-const categoryStyles = {
-    'Keto': {
-        backgroundColor: '#f75f48',
-        color: 'white'
-    },
-    'Light': {
-        backgroundColor: '#a1d168',
-        color: 'black'
-    },
-    'Vegetariano': {
-        backgroundColor: '#f79432',
-        color: 'white'
-    },
-    'Vegano': {
-        backgroundColor: '#4f8206',
-        color: 'white'
-    },
-    'Sin Gluten': {
-        backgroundColor: '#ffd500',
-        color: 'black'
-    },
-    'default': {
-        backgroundColor: '#fe54ac',
-        color: 'white'
-    }
-};
 
 export const ProductItem = ( { product, editBtn, deleteBtn } ) => {
 

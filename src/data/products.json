@@ -96,9 +96,8 @@
 		"shortDescription": "A staff management tool.",
 		"description": "A tool to manage schedules, track hours, handle payroll, and even provide training modules for staff. Built with PHP and Laravel, it includes features for schedule management, time tracking, payroll processing, and training.",
 		"thumbnails": [
-			"https:1",
-			"https:2",
-			"https:3"
+			"https://res.cloudinary.com/ferjen/image/upload/v1684914290/digital-store/5-5c1df51f-34ea-47e3-bd40-2e76130ee0dc_hqrwhk.jpg",
+			"https://res.cloudinary.com/ferjen/image/upload/v1684914289/digital-store/5-a7c7b322-e53b-41dd-aadd-f0c7d2bcd5fa_cuitxs.jpg"
 		],
 		"status": true,
 		"stock": 10,
@@ -119,9 +118,8 @@
 		"shortDescription": "A POS integration system.",
 		"description": "A system that connects various touchpoints like dine-in, take-away, and online orders into a central Point-of-Sale (POS) system. Built with Java and Spring Boot, it includes features for order management, payment processing, and real-time updates.",
 		"thumbnails": [
-			"https:1",
-			"https:2",
-			"https:3"
+			"https://res.cloudinary.com/ferjen/image/upload/v1684914322/digital-store/6-0701d39a-9504-4cee-91f4-f36bb2daec34_u17mgn.jpg",
+			"https://res.cloudinary.com/ferjen/image/upload/v1684914289/digital-store/6-d807766b-f096-40cd-834e-1c8b464c84eb_sgz8ws.jpg"
 		],
 		"status": true,
 		"stock": 10,
@@ -142,9 +140,8 @@
 		"shortDescription": "An app to manage allergen information and offer healthy eating options.",
 		"description": "A SaaS that helps restaurants manage allergen information, nutrition facts and offer suggestions for healthy eating options on their menu. Built with Swift for iOS and Kotlin for Android.",
 		"thumbnails": [
-			"https:1",
-			"https:2",
-			"https:3"
+			"https://res.cloudinary.com/ferjen/image/upload/v1684914290/digital-store/7-afa8e1c2-cfcf-43e8-8fcb-5dafad860f59_deg4p1.jpg",
+			"https://res.cloudinary.com/ferjen/image/upload/v1684914291/digital-store/7-dc46d4c8-b6e2-4ed0-b7eb-2a60aee493aa_pdkkdw.jpg"
 		],
 		"status": true,
 		"stock": 10,
@@ -165,9 +162,8 @@
 		"shortDescription": "An online booking system for chiropractors.",
 		"description": "Create an online booking system that can handle patient appointments, send reminders, and manage patient records. Built with JavaScript and Express.js, it includes appointment reminders and patient record management features.",
 		"thumbnails": [
-			"https:1",
-			"https:2",
-			"https:3"
+			"https://res.cloudinary.com/ferjen/image/upload/v1684916878/digital-store/8-790a09ad-9f7b-4961-a776-7848148f8bab_fg7qzw.jpg",
+			"https://res.cloudinary.com/ferjen/image/upload/v1684916878/digital-store/8-318cbaa6-09bb-4c44-a8d2-b80ddbf246eb_stwaok.jpg"
 		],
 		"status": true,
 		"stock": 10,
@@ -188,9 +184,8 @@
 		"shortDescription": "A secure and user-friendly system to manage patient data.",
 		"description": "Develop a secure and user-friendly system to manage patient data, appointments, treatment plans, and billing. Built with Ruby on Rails, it includes patient data management and billing features.",
 		"thumbnails": [
-			"https:1",
-			"https:2",
-			"https:3"
+			"https://res.cloudinary.com/ferjen/image/upload/v1684916879/digital-store/9-efca0a47-fcbb-4439-a65a-e59a4f6433e2_kajhoa.jpg",
+			"https://res.cloudinary.com/ferjen/image/upload/v1684916878/digital-store/9-5048fea9-36b1-47ab-be82-c919b20adea6_o1nvzc.jpg"
 		],
 		"status": true,
 		"stock": 10,
@@ -210,9 +205,8 @@
 		"shortDescription": "A platform that allows healthcare providers to consult with their patients remotely.",
 		"description": "A platform that allows chiropractors or other healthcare providers to consult with their patients remotely, manage appointments, and securely share medical records and information. Built with Python and Django, it includes video conferencing and medical record sharing features.",
 		"thumbnails": [
-			"https:1",
-			"https:2",
-			"https:3"
+			"https://res.cloudinary.com/ferjen/image/upload/v1684916878/digital-store/10-ee066cc8-c96e-4a68-9d93-c36eebf3ac27_zhsmpv.jpg",
+			"https://res.cloudinary.com/ferjen/image/upload/v1684916880/digital-store/10-6daf45f9-b278-432d-90e4-4bc2345da803_f3qkq5.jpg"
 		],
 		"status": true,
 		"stock": 10,
