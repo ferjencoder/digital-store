@@ -204,7 +204,7 @@ export const ProductForm = ( { selectedProduct, onFetchProducts } ) => {
                     required
                 />
                 <button className="btn-success ff-secondary fs-3" type="submit">
-                    {onSelectedProduct ? 'Update' : 'Create'}
+                    {selectedProduct ? 'Update' : 'Create'}
                 </button>
             </form>
 
