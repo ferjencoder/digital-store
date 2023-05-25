@@ -227,9 +227,8 @@
 		"shortDescription": "A tool to manage and optimize digital marketing campaigns.",
 		"description": "Create a tool that helps small businesses manage their digital marketing campaigns, track analytics, and optimize for better results. Built with React and Node.js, it includes features for campaign management, analytics tracking, and optimization.",
 		"thumbnails": [
-			"https:1",
-			"https:2",
-			"https:3"
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996326/digital-store/11-Firefly_Inpaint_20230524143312_plymgt.png",
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996323/digital-store/11-Firefly_detailed_ux_ui_design_for_a_Digital_Marketing_Management_Tool_23928_aeg81a.jpg"
 		],
 		"status": true,
 		"stock": 10,
@@ -250,9 +249,8 @@
 		"shortDescription": "An e-commerce platform for small businesses.",
 		"description": "A system that helps small businesses manage their online sales, from inventory management to order processing and delivery. Built with Django and React, it includes features for inventory management, order processing, and delivery tracking.",
 		"thumbnails": [
-			"https:1",
-			"https:2",
-			"https:3"
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996322/digital-store/12-Firefly_Inpaint_20230524144719_cfv7fn.png",
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996336/digital-store/12-Firefly_Inpaint_20230524145754_zwryqz.png"
 		],
 		"status": true,
 		"stock": 10,
@@ -273,9 +271,8 @@
 		"shortDescription": "A financial tool for small businesses.",
 		"description": "Develop a simplified accounting tool for small businesses to manage their finances, generate invoices, and handle taxes. Built with Java and Spring, it includes features for financial management, invoice generation, and tax calculation.",
 		"thumbnails": [
-			"https:1",
-			"https:2",
-			"https:3"
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996321/digital-store/13-74003521-f339-4150-9e86-c7473360f745_a5fnnq.jpg",
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996322/digital-store/13-Firefly_higly_detailed_ux_ui_design_for_an_Accounting_and_Invoicing_Software_57730_vcoeha.jpg"
 		],
 		"status": true,
 		"stock": 10,
@@ -296,9 +293,8 @@
 		"shortDescription": "A project management tool for small businesses.",
 		"description": "A tool that helps small businesses manage their projects, collaborate, and track their progress. Built with React and Node.js, it includes features for project tracking, collaboration, and progress reporting.",
 		"thumbnails": [
-			"https:1",
-			"https:2",
-			"https:3"
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996321/digital-store/14-6a4d4b4f-25ed-4dfd-b997-1c2b9e7a9302_bkvkfc.jpg",
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996324/digital-store/14-Firefly_Inpaint_20230524150826_pewtdo.png2"
 		],
 		"status": true,
 		"stock": 10,
@@ -319,9 +315,8 @@
 		"shortDescription": "A comprehensive system to enhance customer service.",
 		"description": "A system that helps businesses manage customer inquiries, automate responses, and improve overall customer service. Built with Python and Flask, it includes features for inquiry management, automated responses, and customer service analytics.",
 		"thumbnails": [
-			"https:1",
-			"https:2",
-			"https:3"
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996323/digital-store/15-7998d206-4174-479d-bbff-42df45295aa6_qjrmpe.jpg",
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996322/digital-store/15-a701c05c-b029-491f-bc5f-35c54b0828fb_hyid9b.jpg"
 		],
 		"status": true,
 		"stock": 10,
@@ -342,9 +337,8 @@
 		"shortDescription": "A tool to analyze and visualize data.",
 		"description": "A tool that helps businesses analyze data, visualize trends, and make informed decisions. Built with JavaScript and D3.js, it includes features for data analysis, trend visualization, and decision support.",
 		"thumbnails": [
-			"https:1",
-			"https:2",
-			"https:3"
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996924/digital-store/16-405ff4d6-f0f6-4304-8ab1-6012f9fb40d0_dncphq.png",
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996323/digital-store/16-39e04c59-b017-49c6-8f5e-f672aecb278c_hygnl2.jpg"
 		],
 		"status": true,
 		"stock": 10,
@@ -365,9 +359,8 @@
 		"shortDescription": "A software to streamline HR processes.",
 		"description": "A software that helps businesses manage HR processes, including employee management, payroll, benefits, and compliance. Built with PHP and Laravel, it includes features for employee management, payroll processing, benefits administration, and compliance tracking.",
 		"thumbnails": [
-			"https:1",
-			"https:2",
-			"https:3"
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996323/digital-store/17-a2a4344d-8e2c-45fc-95e6-bbcac61f6aea_q8tol8.jpg",
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996325/digital-store/17-b06db3b4-5d41-4e06-89f5-f7d8d25059e3_qfqlva.jpg"
 		],
 		"status": true,
 		"stock": 10,
@@ -388,9 +381,8 @@
 		"shortDescription": "A system to manage and optimize membership programs.",
 		"description": "A system that helps organizations manage their membership programs, with features like member tracking, payment processing, and member communication. Built with JavaScript and Express.js, it includes membership management and payment processing features.",
 		"thumbnails": [
-			"https:1",
-			"https:2",
-			"https:3"
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996324/digital-store/18-e2b3890f-d776-41ee-a172-322fd4a17c98_emzspg.jpg",
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996325/digital-store/18-a1b1ba1c-f5fb-4522-8eb9-9a4b17999af9_sqtnjo.jpg"
 		],
 		"status": true,
 		"stock": 10,
@@ -411,9 +403,8 @@
 		"shortDescription": "An application to create interactive virtual tours.",
 		"description": "A tool that allows users to create immersive and interactive virtual tours for real estate, tourism, and education. Built with Unity and C#, it includes panorama stitching, hotspot creation, and interactive elements.",
 		"thumbnails": [
-			"https:1",
-			"https:2",
-			"https:3"
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996326/digital-store/19-75eed150-8243-433b-b64e-229ea5ce7eb2_cqvbm9.jpg",
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996325/digital-store/19-981f2662-8173-4f7a-a6e2-c3028361e4c7_opbelf.jpg"
 		],
 		"status": true,
 		"stock": 10,
@@ -434,9 +425,8 @@
 		"shortDescription": "A comprehensive platform for online education.",
 		"description": "A comprehensive platform that enables educators to create and deliver courses online, with features for quizzes, grading, and student tracking. Built with React and Node.js, it includes course creation, quizzes, grading, and student tracking features.",
 		"thumbnails": [
-			"https:1",
-			"https:2",
-			"https:3"
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996329/digital-store/20-Firefly_Inpaint_20230525032104_m97jqv.png",
+			"https://res.cloudinary.com/ferjen/image/upload/v1684996329/digital-store/20-Firefly_Inpaint_20230525032104_m97jqv.png"
 		],
 		"status": true,
 		"stock": 10,

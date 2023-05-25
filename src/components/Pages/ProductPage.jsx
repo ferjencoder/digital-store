@@ -47,39 +47,49 @@ export const ProductPage = () => {
     };
 
     return (
-        <main className="main-container">
+        <>
             <Navbar />
-            <h1 className="ff-secondary">Digital Store</h1>
-            <section className="productPage-container">
-                <section className="productsForm-section">
-                    <ProductForm
-                        selectedProduct={selectedProduct}
-                        onFetchProducts={fetchProducts}
-                    />
+            <main className="main-container">
+                <h1 className="ff-secondary">Digital Store</h1>
+                <section className="productPage-container">
+                    <section className="productsForm-section">
+                        <ProductForm
+                            selectedProduct={selectedProduct}
+                            onFetchProducts={fetchProducts}
+                        />
+                    </section>
+                    <section className="products-section">
+                        <button
+                            className="btn-delete ff-secondary fs-3"
+                            onClick={handleShowAllProducts}
+                        >
+                            Show All Products
+                        </button>
+                        {error ? (
+                            <div>Error: {error}</div>
+                        ) : (
+                            <ul className="products-list">
+                                {products.slice( 0, -1 ).map( ( product ) => (
+                                    <ProductItem
+                                        key={product.id}
+                                        product={product}
+                                        editBtn={handleEdit}
+                                        deleteBtn={handleDelete}
+                                    />
+                                ) )}
+                                {products.length > 0 && (
+                                    <ProductItem
+                                        key={products[ products.length - 1 ].id}
+                                        product={products[ products.length - 1 ]}
+                                        editBtn={handleEdit}
+                                        deleteBtn={handleDelete}
+                                    />
+                                )}
+                            </ul>
+                        )}
+                    </section>
                 </section>
-                <section className="products-section">
-                    <button
-                        className="btn-delete ff-secondary fs-3"
-                        onClick={handleShowAllProducts}
-                    >
-                        Show All Products
-                    </button>
-                    {error ? (
-                        <div>Error: {error}</div>
-                    ) : (
-                        <ul className="products-list">
-                            {products.map( ( product ) => (
-                                <ProductItem
-                                    key={product.id}
-                                    product={product}
-                                    editBtn={handleEdit}
-                                    deleteBtn={handleDelete}
-                                />
-                            ) )}
-                        </ul>
-                    )}
-                </section>
-            </section>
-        </main>
+            </main>
+        </>
     );
 };

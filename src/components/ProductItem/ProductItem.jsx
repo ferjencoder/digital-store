@@ -24,7 +24,7 @@ export const ProductItem = ( { product, editBtn, deleteBtn } ) => {
                 className='product-item__image'
             />
             <div className='product-item__body'>
-                <p className='ff-secondary fs-2'>{product.title}</p>
+                <p className='ff-secondary fs-2 ls-1'>{product.title}</p>
                 <p>{product.category}</p>
                 <p>{product.shortDescription}</p>
                 <p>Price: {priceInARS( product.price )}</p>
